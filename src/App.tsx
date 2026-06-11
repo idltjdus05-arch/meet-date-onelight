@@ -330,10 +330,10 @@ function SchedulePage() {
           <span className="step-badge">2 / 3</span>
 
           <h1>어디에서 볼까?</h1>
-          <p>대구, 서울, 기타 중에서 골라줘.</p>
+          <p>대구, 기타 중에서 골라줘.</p>
 
           <div className="place-options">
-            {["대구", "서울", "기타"].map((option) => (
+            {["대구", "기타"].map((option) => (
               <label className="place-option" key={option}>
                 <input
                   type="radio"
