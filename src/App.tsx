@@ -32,9 +32,8 @@ const friendNicknames = [
   "작곰",
   "도베",
   "가현",
-  "예린",
   "수린",
-  "도현"
+  "도현",
 ];
 
 function toIsoDate(date: Date) {
@@ -246,7 +245,7 @@ function SchedulePage() {
 
     if (error) {
       console.error(error);
-      setSubmitMessage("저장 중 오류가 났어 ㅠㅠ 다시 시도해줘!");
+     setSubmitMessage(`저장 오류: ${error.message}`);
       return;
     }
 
