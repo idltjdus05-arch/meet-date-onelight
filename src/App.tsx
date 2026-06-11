@@ -34,6 +34,7 @@ const friendNicknames = [
   "가현",
   "예린",
   "수린",
+  "도현"
 ];
 
 function toIsoDate(date: Date) {
