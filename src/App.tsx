@@ -27,17 +27,13 @@ type ResponseRow = {
 };
 
 const friendNicknames = [
-  "개",
-  "탱둥",
-  "쿵야",
-  "당민",
-  "로투스",
-  "양기니",
-  "또윤",
-  "manydog",
-  "땃쥐",
-  "세삥",
-  "아혀니",
+  "서연",
+  "예린",
+  "작곰",
+  "도베",
+  "가현",
+  "예린",
+  "수린",
 ];
 
 function toIsoDate(date: Date) {
@@ -147,7 +143,7 @@ function InvitePage({ onYes }: { onYes: () => void }) {
         alt="사모예드 강아지"
       />
 
-      <h1>우리 여름방학에 만날까요?</h1>
+      <h1>우리 여름방학에 한번 볼까?</h1>
       <p>No 눌러보고 싶으면 눌러보든지 ㅡ////ㅡ *</p>
 
       <div className="button-area">
@@ -233,7 +229,7 @@ function SchedulePage() {
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    const { error } = await supabase.from("responses").upsert(
+    const { error } = await supabase.from("responses_onelight").upsert(
       {
         nickname: selectedNickname,
         selected_dates: selectedDates,
@@ -454,7 +450,7 @@ function AdminPage() {
     setIsLoading(true);
 
     const { data, error } = await supabase
-      .from("responses")
+      .from("responses_onelight")
       .select("*")
       .order("updated_at", { ascending: false });
 
